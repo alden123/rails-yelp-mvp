@@ -1,0 +1,16 @@
+  <div class="text-inline center-text">
+    <% @restaurants.each do |restaurant| %>
+
+    <h4><%= restaurant.id %></h4>
+    <h4><%= restaurant.name %></h4>
+    <%= link_to "Accéder au restaurant'", restaurant_path(restaurant)%>   <%= link_to "Modifier le restaurant'", edit_restaurant_path(restaurant) %>
+    <%= link_to "Détruire le restaurant'", restaurant_path(restaurant), method: :delete %>
+
+    <%end%>
+
+    <br>
+    <br>
+    <span class="bnt btn-success"> <%=link_to "créer un nouveau restaurant", new_restaurant_path(@restaurant)  %> </span>
+
+  </div>
+
